@@ -1,4 +1,4 @@
-# babel-plugin-dev-expression
+# babel-plugin-dev-expression [![npm version](https://badge.fury.io/js/babel-plugin-dev-expression.svg)](https://badge.fury.io/js/babel-plugin-dev-expression)
 
 A mirror of Facebook's dev-expression Babel plugin.
 
