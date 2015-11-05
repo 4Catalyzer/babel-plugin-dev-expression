@@ -38,6 +38,8 @@ if (!condition) {
 }
 ```
 
+Recommended for use with https://github.com/zertosh/invariant.
+
 ## `warning`
 
 Replaces
@@ -53,3 +55,5 @@ if ("production" !== process.env.NODE_ENV) {
   warning(condition, argument, argument);
 }
 ```
+
+Recommended for use with https://github.com/r3dm/warning.
