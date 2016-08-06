@@ -18,6 +18,8 @@ with
 process.env.NODE_ENV !== 'production'
 ```
 
+**Note:** The `dev-expression` transform does not run when `NODE_ENV` is `test`. As such, if you use `__DEV__`, you will need to define it as a global constant in your test environment.
+
 ## `invariant`
 
 Replaces
