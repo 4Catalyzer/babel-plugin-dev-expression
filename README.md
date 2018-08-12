@@ -40,7 +40,7 @@ if (!condition) {
 }
 ```
 
-Recommended for use with https://github.com/zertosh/invariant.
+Recommended for use with https://github.com/zertosh/invariant or smaller https://github.com/alexreardon/tiny-invariant.
 
 ## `warning`
 
