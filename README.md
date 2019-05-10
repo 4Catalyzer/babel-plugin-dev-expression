@@ -58,4 +58,4 @@ if ("production" !== process.env.NODE_ENV) {
 }
 ```
 
-Recommended for use with https://github.com/r3dm/warning.
+Recommended for use with https://github.com/r3dm/warning or smaller https://github.com/alexreardon/tiny-warning.
