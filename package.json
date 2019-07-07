@@ -3,10 +3,12 @@
   "version": "0.2.1",
   "description": "A mirror of Facebook's dev-expression Babel plugin",
   "files": [
-    "*.js",
-    "PATENTS"
+    "*.js"
   ],
   "main": "dev-expression.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/4Catalyzer/babel-plugin-dev-expression.git"
@@ -18,9 +20,16 @@
     "dev-expression"
   ],
   "author": "Jimmy Jia",
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/4Catalyzer/babel-plugin-dev-expression/issues"
   },
-  "homepage": "https://github.com/4Catalyzer/babel-plugin-dev-expression#readme"
+  "homepage": "https://github.com/4Catalyzer/babel-plugin-dev-expression#readme",
+  "peerDependencies": {
+    "@babel/core": "^7.0.0"
+  },
+  "devDependencies": {
+    "codecov": "^3.5.0",
+    "jest-cli": "^24.8.0"
+  }
 }

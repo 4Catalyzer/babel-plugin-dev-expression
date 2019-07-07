@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - node
+
+cache:
+  - yarn
+  - npm
+
+after_script:
+  - node_modules/.bin/codecov
+
+branches:
+  only:
+    - master
