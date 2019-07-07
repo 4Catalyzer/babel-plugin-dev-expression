@@ -35,16 +35,46 @@ describe('dev-expression', function() {
     process.env.NODE_ENV = oldEnv;
   });
 
-  it('should replace __DEV__ in if', () => {
-    compare(
-`
-if (__DEV__) {
-  console.log('foo')
-}`,
-`if (process.env.NODE_ENV !== "production") {
+  describe('__DEV__', () => {
+    it('should replace __DEV__ in if', () => {
+      compare(
+  `
+  if (__DEV__) {
+    console.log('foo')
+  }`,
+  `if (process.env.NODE_ENV !== "production") {
   console.log('foo');
 }`
-    );
+      );
+    });
+
+    it('should not replace locally-defined __DEV__', () => {
+      compare(
+  `
+  const __DEV__ = false;
+
+  if (__DEV__) {
+    console.log('foo')
+  }`,
+  `const __DEV__ = false;
+
+if (__DEV__) {
+  console.log('foo');
+}`
+      );
+    });
+
+    it('should not replace object key', () => {
+      compare(
+  `
+  const foo = {
+    __DEV__: 'hey',
+  }`,
+  `const foo = {
+  __DEV__: 'hey'
+};`
+      );
+    });
   });
 
   it('should replace warning calls', () => {

@@ -34,8 +34,11 @@ module.exports = function(babel) {
           if (process.env.NODE_ENV === 'test') {
             return;
           }
-          // replace __DEV__ with process.env.NODE_ENV !== 'production'
-          if (path.isIdentifier({name: '__DEV__'})) {
+          // replace global __DEV__ with process.env.NODE_ENV !== 'production'
+          if (
+            path.isIdentifier({name: '__DEV__'}) &&
+            path.scope.hasGlobal('__DEV__')
+          ) {
             path.replaceWith(DEV_EXPRESSION);
           }
         },
