@@ -30,6 +30,6 @@
   },
   "devDependencies": {
     "codecov": "^3.6.5",
-    "jest": "^26.0.0"
+    "jest": "^26.0.1"
   }
 }
