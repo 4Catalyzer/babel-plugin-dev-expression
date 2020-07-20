@@ -29,7 +29,7 @@
     "@babel/core": "^7.0.0"
   },
   "devDependencies": {
-    "codecov": "^3.7.0",
+    "codecov": "^3.7.1",
     "jest": "^26.1.0"
   }
 }
