@@ -77,7 +77,7 @@ module.exports = function(babel) {
             // code removal in a minifier will strip that out.
             var condition = node.arguments[0];
             var devInvariant = t.callExpression(
-              node.callee,
+              t.cloneNode(node.callee),
               [t.booleanLiteral(false)].concat(node.arguments.slice(1))
             );
             devInvariant[SEEN_SYMBOL] = true;
