@@ -82,7 +82,7 @@ module.exports = function(babel) {
             );
             devInvariant[SEEN_SYMBOL] = true;
             var prodInvariant = t.callExpression(
-              node.callee,
+              t.cloneNode(node.callee),
               [t.booleanLiteral(false)]
             );
             prodInvariant[SEEN_SYMBOL] = true;
